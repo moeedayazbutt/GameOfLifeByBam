@@ -5,6 +5,7 @@ import android.test.TouchUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
+import bamcorp.gameoflifebybam.controller.ControllerState;
 import bamcorp.gameoflifebybam.ui.MainActivity;
 
 /**
@@ -33,15 +34,20 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         assertEquals(textViewStatus.getText(), activity.getResources().getString(R.string.status_game_new));
     }
 
-    public void testLoopStartedOnPlayButtonPress()
+    public void testLoopPausedOnPauseButtonPress()
     {
         final MainActivity activity = getActivity();
 
         Button buttonPlay = (Button) activity.findViewById(R.id.button_play);
+
+        //initial state should be pause
+        assertEquals(activity.getController().getControllerState(), ControllerState.PAUSE);
+
+        //play
+        TouchUtils.clickView(this, buttonPlay);
+        //pause
         TouchUtils.clickView(this, buttonPlay);
 
-
-        TextView textViewStatus = (TextView) activity.findViewById(R.id.textview_status);
-        assertEquals(textViewStatus.getText(), activity.getResources().getString(R.string.status_game_new));
+        assertEquals(activity.getController().getControllerState(), ControllerState.PAUSE);
     }
 }

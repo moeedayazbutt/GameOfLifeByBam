@@ -49,6 +49,11 @@ public class MainActivity extends ActionBarActivity
         controller.cancel();
     }
 
+    public Controller getController()
+    {
+        return this.controller;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

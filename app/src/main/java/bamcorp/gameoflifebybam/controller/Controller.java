@@ -197,6 +197,11 @@ public class Controller
         this.state = state;
     }
 
+    public ControllerState getControllerState()
+    {
+        return this.state;
+    }
+
     public void reset()
     {
         pause();
