@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Game of Life</string>
+    <string name="button_play_text">Play</string>
+    <string name="button_pause_text">Pause</string>
+    <string name="button_reset_text">Reset</string>
+    <string name="status_game_new">[new]</string>
+    <string name="status_game_finished">[finished]</string>
+    <string name="status_game_playing">[playing]</string>
+    <string name="status_game_paused">[paused]</string>
+
+
+
+</resources>
