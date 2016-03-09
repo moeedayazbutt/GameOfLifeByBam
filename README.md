@@ -1,2 +1,2 @@
 # GameOfLifeByBam
-An Android implementation of Conway's Game of Life by Bam 
+An Android based implementation of Conway's Game of Life by Bam 
